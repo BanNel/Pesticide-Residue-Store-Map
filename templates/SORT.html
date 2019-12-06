@@ -1,0 +1,294 @@
+ <!doctype html>
+ <html >
+   <head>
+   <meta charset="UTF-8">
+   <!--    讓網頁不會自動因手機螢幕變小而扭曲，使得RWD網頁能正常執行-->
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>健康呷霸粒</title>
+   <!-- css-->
+   <style>
+	 #mwt_mwt_slider_scroll
+    {
+     top: 0;
+     left:-150px;
+     width:150px;
+     position:fixed;
+     z-index:9999;
+    }
+
+     #mwt_slider_content
+	{
+     background:#9da9c4;
+     text-align:center;
+     padding-top:20px;
+    }
+
+     #mwt_fb_tab 
+	{
+     position:absolute;
+     top:20px;
+     right:-24px;
+     width:24px;
+     background:#39393a;
+     color:#ffffff;
+     font-family:Arial, Helvetica, sans-serif;
+     text-align:center;
+     padding:9px 0;
+
+     -moz-border-radius-topright:10px;
+     -moz-border-radius-bottomright:10px;
+     -webkit-border-top-right-radius:10px;
+     -webkit-border-bottom-right-radius:10px;
+    }
+     #mwt_fb_tab span 
+	{
+     display:block;
+     height:14px;
+     padding:1px 0;
+     line-height:12px;
+     text-transform:uppercase;
+     font-size:16px;
+    }
+   </style>
+<!-- javascript-->
+<script type='text/javascript' src='https://code.jquery.com/jquery-1.9.1.min.js'></script>
+<script type='text/javascript'>
+$(function(){
+var w = $("#mwt_slider_content").width();
+$('#mwt_slider_content').css('height', ($(window).height() - 20) + 'px' ); //將區塊自動撐滿畫面高度
+
+$("#mwt_fb_tab").mouseover(function(){ //滑鼠滑入時
+if ($("#mwt_mwt_slider_scroll").css('left') == '-'+w+'px')
+{
+$("#mwt_mwt_slider_scroll").animate({ left:'0px' }, 600 ,'swing');
+}
+});
+
+
+$("#mwt_slider_content").mouseleave(function(){　//滑鼠離開後
+$("#mwt_mwt_slider_scroll").animate( { left:'-'+w+'px' }, 600 ,'swing');
+});
+});
+
+</script>
+   </head>
+   
+   <body>
+    <DIV style="text-align:center;">
+     
+	 <img src="../static/image/LOGO.png" height="110px" width="170px">
+
+   </DIV>
+   <style>
+      a {
+    text-decoration:none;
+     }
+    html{
+   width: 100% ;
+   height: 100% ;
+   background: url(../static/image/bg.png)  no-repeat  center  bottom ;    
+    -webkit-background-size: contain ;
+   background-size: cover ;
+   background-attachment: fixed;
+   } </style>
+   <hr color="#146836" width="80%" size="3">
+   
+   <!--排名表格-->
+      <h1 align="center"><font face="微軟正黑體" size="25px">店家排名</font></h1><br>
+	  
+	  <table align="center" border="1" >
+   
+     <tr height="20">
+	    <th  width="200" bgcolor="#c4e0b8"><font face="微軟正黑體" size="5px">農民姓名(代號)</th>
+		<th  width="300" bgcolor="#c4e0b8"><font face="微軟正黑體" size="5px">地址</th>	
+		<th  width="200" bgcolor="#c4e0b8"><font face="微軟正黑體" size="5px">等級</th>
+	 </tr>	 
+	 
+     <tr>
+	    <th  width="200">
+	 	  <a href="NEWS.html"><font face="微軟正黑體" size="4px" color="#0053ff" style=cursor='hand' onMouseover="this.color='820f26'"
+            onmouseout="this.color='0053ff'">
+		    德昌
+		  </font></a>
+		 </th>
+		<th  width="250"><font face="微軟正黑體" size="4px">桃園市中壢區中山東路二段510號</th>
+		<th  width="200"><img src="../static/image/red.png"></th>
+
+	 </tr>
+     <tr>
+	    <th  width="200">
+	 	  <a href="NEWS.html"><font face="微軟正黑體" size="4px" color="#0053ff" style=cursor='hand' onMouseover="this.color='820f26'"
+            onmouseout="this.color='0053ff'">
+		    合順
+		  </font></a>		
+		</th>
+		<th  width="250"><font face="微軟正黑體" size="4px">桃園市中壢區新生路223號</th>
+		<th  width="200"><img src="../static/image/yellow.png"></th>
+
+	 </tr>
+     <tr>
+	    <th  width="200">
+	 	  <a href="NEWS.html"><font face="微軟正黑體" size="4px" color="#0053ff" style=cursor='hand' onMouseover="this.color='820f26'"
+            onmouseout="this.color='0053ff'">
+		   三豐
+		  </font></a>			
+		</th>
+		<th  width="250"><font face="微軟正黑體" size="4px">桃園市中壢區忠孝路100號</th>
+		 
+		<th  width="200"><img src="../static/image/green.png"></th>
+
+	 </tr>
+	  <tr>
+	    <th  width="200">
+	 	  <a href="NEWS.html"><font face="微軟正黑體" size="4px" color="#0053ff" style=cursor='hand' onMouseover="this.color='820f26'"
+            onmouseout="this.color='0053ff'">
+		   何信
+		  </font></a>			
+		</th>
+		<th  width="250"><font face="微軟正黑體" size="4px">桃園市中壢區環中東路0巷562號</th>
+		 
+		<th  width="200"><img src="../static/image/green.png"></th>
+
+	 </tr>
+	  <tr>
+	    <th  width="200">
+	 	  <a href="NEWS.html"><font face="微軟正黑體" size="4px" color="#0053ff" style=cursor='hand' onMouseover="this.color='820f26'"
+            onmouseout="this.color='0053ff'">
+		   育成
+		  </font></a>			
+		</th>
+		<th  width="250"><font face="微軟正黑體" size="4px">桃園市中壢區中山路500號</th>
+		 
+		<th  width="200"><img src="../static/image/green.png"></th>
+
+	 </tr>
+	  <tr>
+	    <th  width="200">
+	 	  <a href="NEWS.html"><font face="微軟正黑體" size="4px" color="#0053ff" style=cursor='hand' onMouseover="this.color='820f26'"
+            onmouseout="this.color='0053ff'">
+		   和順
+		  </font></a>			
+		</th>
+		<th  width="250"><font face="微軟正黑體" size="4px">桃園市桃園區慈文路317號1樓</th>
+		 
+		<th  width="200"><img src="../static/image/green.png"></th>
+
+	 </tr>
+	  <tr>
+	    <th  width="200">
+	 	  <a href="NEWS.html"><font face="微軟正黑體" size="4px" color="#0053ff" style=cursor='hand' onMouseover="this.color='820f26'"
+            onmouseout="this.color='0053ff'">
+		   瞬吉
+		  </font></a>			
+		</th>
+		<th  width="250"><font face="微軟正黑體" size="4px">桃園市桃園區大有路0巷581號1樓</th>
+		 
+		<th  width="200"><img src="../static/image/green.png"></th>
+
+	 </tr>
+	  <tr>
+	    <th  width="200">
+	 	  <a href="NEWS.html"><font face="微軟正黑體" size="4px" color="#0053ff" style=cursor='hand' onMouseover="this.color='820f26'"
+            onmouseout="this.color='0053ff'">
+		   豐田
+		  </font></a>			
+		</th>
+		<th  width="250"><font face="微軟正黑體" size="4px">桃園市新屋區中山路409號</th>
+		 
+		<th  width="200"><img src="../static/image/green.png"></th>
+
+	 </tr>
+	  <tr>
+	    <th  width="200">
+	 	  <a href="NEWS.html"><font face="微軟正黑體" size="4px" color="#0053ff" style=cursor='hand' onMouseover="this.color='820f26'"
+            onmouseout="this.color='0053ff'">
+		   潤發
+		  </font></a>			
+		</th>
+		<th  width="250"><font face="微軟正黑體" size="4px">桃園市楊梅區新農街17號</th>
+		 
+		<th  width="200"><img src="../static/image/green.png"></th>
+
+	 </tr>
+	  <tr>
+	    <th  width="200">
+	 	  <a href="NEWS.html"><font face="微軟正黑體" size="4px" color="#0053ff" style=cursor='hand' onMouseover="this.color='820f26'"
+            onmouseout="this.color='0053ff'">
+		   富泰
+		  </font></a>			
+		</th>
+		<th  width="250"><font face="微軟正黑體" size="4px">桃園市中壢區長春路119號</th>
+		 
+		<th  width="200"><img src="../static/image/green.png"></th>
+
+	 </tr>
+	  <tr>
+	    <th  width="200">
+	 	  <a href="NEWS.html"><font face="微軟正黑體" size="4px" color="#0053ff" style=cursor='hand' onMouseover="this.color='820f26'"
+            onmouseout="this.color='0053ff'">
+		   順發
+		  </font></a>			
+		</th>
+		<th  width="250"><font face="微軟正黑體" size="4px">桃園市桃園區大有路466號</th>
+		 
+		<th  width="200"><img src="../static/image/green.png"></th>
+
+	 </tr>
+	 
+	 </font>
+   </table>
+   
+   
+<!--選單-->
+	 <div id="mwt_mwt_slider_scroll">
+       <div id="mwt_fb_tab">
+         <span>M</span>
+         <span>E</span>
+         <span>N</span>
+         <span>U</span>
+       </div>
+       <div id="mwt_slider_content">     
+	      <nav class="navbar navbar-inverse easy-sidebar">
+	     <div class="container-fluid"> 
+	     <div class="navbar-header">
+
+		    <h1> <font  face="微軟正黑體">功能列表</font></h1>
+		  <a href="/">
+		  <font color="#000000" face="微軟正黑體" style=cursor='hand' 
+         onMouseover="this.color='820f26'"
+         onmouseout="this.color='000000'">健康地圖
+          </font></a> <br>
+		  
+		  <br><a href="/status">
+		  <font color="#000000" face="微軟正黑體" style=cursor='hand' 
+         onMouseover="this.color='820f26'"
+         onmouseout="this.color='000000'">農藥抽查狀況
+          </font></a> <br>
+		  
+		  <br><a href="/rank">
+		  <font color="#000000" face="微軟正黑體" style=cursor='hand' 
+         onMouseover="this.color='820f26'"
+         onmouseout="this.color='000000'">店家排名
+          </font></a> <br>
+		  
+		  <br><a href="../knowledge/?Pesticide=THIOPHANATE-METHYL+%2B+OXINE-COPPER">
+		  <font color="#000000" face="微軟正黑體" style=cursor='hand' 
+         onMouseover="this.color='820f26'"
+         onmouseout="this.color='000000'">農藥小百科
+          </font></a> <br> 
+		  
+	     </div>
+	 	
+	 	 <!-- /.container-fluid --> 
+		  </nav>
+		  <div class="container">
+		  
+		 
+	 	 </div> 
+       </div>
+     </div>
+<!--選單-->
+
+	</body>
+		
+</html>

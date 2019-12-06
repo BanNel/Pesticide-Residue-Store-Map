@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Custom Markers </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+     
+      var map;
+      var parking = 'parking'
+      var library = 'library'
+      var info = 'info'
+      var title;
+      
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 16,
+          center: new google.maps.LatLng(25.000261, 121.307387),
+          mapTypeId: 'roadmap'
+        });
+
+        var iconBase = 'http://maps.google.com/mapfiles/ms/icons/';
+        var icons = {
+          parking: {
+            icon: iconBase + 'green-dot.png'
+          },
+          library: {
+            icon: iconBase + 'yellow-dot.png'
+          },
+          info: {
+            icon: iconBase + 'red-dot.png'
+          }
+        };
+
+        var  features = [
+          {{  name |safe }}
+          {position: new google.maps.LatLng(25.000100, 121.307136),type: info,title: '中申'},{position: new google.maps.LatLng(25.000129, 121.307246),type: info,title: '千舜'},{position: new google.maps.LatLng(25.000034, 121.306879),type: info,title: '文和'},{position: new google.maps.LatLng(25.000129, 121.306796),type: info,title: '日順'},{position: new google.maps.LatLng(25.000292, 121.306686),type: info,title: '永銘'},{position: new google.maps.LatLng(25.000433, 121.306606),type: info,title: '禾裕'},{position: new google.maps.LatLng(24.999923, 121.306775),type: info,title: '百勝'},{position: new google.maps.LatLng(24.999879, 121.306724),type: info,title: '宏記'},{position: new google.maps.LatLng(24.999850, 121.306681),type: info,title: '協輝'},{position: new google.maps.LatLng(24.999736, 121.306496),type: info,title: '服務'},{position: new google.maps.LatLng(24.999760, 121.306397),type: info,title: '金福'},{position: new google.maps.LatLng(24.999772, 121.306357),type: info,title: '信陽'},{position: new google.maps.LatLng(24.999901, 121.306271),type: info,title: '建豐'},{position: new google.maps.LatLng(25.000053, 121.307296),type: info,title: '振榮'},{position: new google.maps.LatLng(25.000167, 121.307441),type: info,title: '高青'},{position: new google.maps.LatLng(25.000298, 121.307398),type: info,title: '清平'},{position: new google.maps.LatLng(25.000446, 121.307288),type: info,title: '隆成'},{position: new google.maps.LatLng(25.000135, 121.307191),type: info,title: '順吉'},{position: new google.maps.LatLng(25.000108, 121.306987),type: info,title: '順安'},
+
+        ];
+
+		 var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">億榮果菜行</h1>'+
+            '<div id="bodyContent">'+
+            '抽檢合格率 90% '+
+            ' <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+            '詳細資訊</a> '+
+            '</div>'+
+            '</div>';
+		
+
+		var infowindow = new google.maps.InfoWindow();
+		
+		
+        // Create markers.
+        features.forEach(function(feature) {
+          var marker = new google.maps.Marker({
+            position: feature.position,
+            icon: icons[feature.type].icon,
+            title: feature.title,
+            map: map
+          });
+		   marker.addListener('click', function() {
+		    infowindow.setContent("<a href = '/status' target='_parent'>更多店家資訊</a>");
+          infowindow.open(map, marker);
+        });
+        });
+		
+
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBI4aMMLGUMGhC6112Lpf7ssxZ8-Ok_Wk4&callback=initMap">
+    </script>
+  </body>
+</html>

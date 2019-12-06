@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Custom Markers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 16,
+          center: new google.maps.LatLng(-33.91722, 151.23064),
+          mapTypeId: 'roadmap'
+        });
+
+        var iconBase = 'http://maps.google.com/mapfiles/ms/icons/';
+        var icons = {
+          parking: {
+            icon: iconBase + 'green-dot.png'
+          },
+          library: {
+            icon: iconBase + 'yellow-dot.png'
+          },
+          icon: {
+            icon: iconBase + 'red-dot.png'
+          }
+        };
+
+        var  features = [
+          {
+            position: new google.maps.LatLng(25.000261, 121.307387),
+            type: 'info'
+          }, {
+            position: new google.maps.LatLng(25.000195, 121.307329),
+            type: 'info'
+          }, {
+            position: new google.maps.LatLng(25.000159, 121.307173),
+            type: 'info'
+          }, {
+            position: new google.maps.LatLng(25.000202, 121.306767),
+            type: 'info'
+          }, {
+            position: new google.maps.LatLng(24.999898, 121.307024),
+            type: 'info'
+          }, {
+            position: new google.maps.LatLng(24.999815, 121.306976),
+            type: 'info'
+          }, {
+            position: new google.maps.LatLng(-33.91784, 151.23094),
+            type: 'info'
+          }, {
+            position: new google.maps.LatLng(-33.91682, 151.23149),
+            type: 'info'
+          }, {
+            position: new google.maps.LatLng(-33.91790, 151.23463),
+            type: 'info'
+          }, {
+            position: new google.maps.LatLng(-33.91666, 151.23468),
+            type: 'info'
+          }, {
+            position: new google.maps.LatLng(-33.916988, 151.233640),
+            type: 'info'
+          }, {
+            position: new google.maps.LatLng(25.000133, 121.307216),
+            type: 'parking'
+          }, {
+            position: new google.maps.LatLng(-33.916365282092855, 151.22937399734496),
+            type: 'parking'
+          }, {
+            position: new google.maps.LatLng(-33.91665018901448, 151.2282474695587),
+            type: 'parking'
+          }, {
+            position: new google.maps.LatLng(25.000544, 121.306564),
+            type: 'parking'
+          }, {
+            position: new google.maps.LatLng(-33.91608037421864, 151.23288232673644),
+            type: 'parking'
+          }, {
+            position: new google.maps.LatLng(-33.91851096391805, 151.2344058214569),
+            type: 'parking'
+          }, {
+            position: new google.maps.LatLng(-33.91818154739766, 151.2346203981781),
+            type: 'parking'
+          }, {
+            position: new google.maps.LatLng(25.000038, 121.307256),
+            type: 'library'
+          }
+        ];
+
+		 var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">億榮果菜行</h1>'+
+            '<div id="bodyContent">'+
+            '抽檢合格率 90% '+
+            ' <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+            '詳細資訊</a> '+
+            '</div>'+
+            '</div>';
+		
+		var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+		
+		
+		
+		
+        // Create markers.
+        features.forEach(function(feature) {
+          var marker = new google.maps.Marker({
+            position: feature.position,
+            icon: icons[feature.type].icon,
+            map: map
+          });
+		   marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+        });
+		
+
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBI4aMMLGUMGhC6112Lpf7ssxZ8-Ok_Wk4&callback=initMap">
+    </script>
+  </body>
+</html>

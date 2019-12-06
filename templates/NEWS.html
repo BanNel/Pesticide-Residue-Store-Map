@@ -1,0 +1,241 @@
+ <!doctype html>
+ <html >
+   <head>
+
+   <meta charset="UTF-8">
+   <!--    讓網頁不會自動因手機螢幕變小而扭曲，使得RWD網頁能正常執行-->
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>健康呷霸粒</title>
+   <!-- css-->
+
+  
+  <style>
+	 #mwt_mwt_slider_scroll
+    {
+     top: 0;
+     left:-150px;
+     width:150px;
+     position:fixed;
+     z-index:9999;
+    }
+
+     #mwt_slider_content
+	{
+     background:#9da9c4;
+     text-align:center;
+     padding-top:20px;
+    }
+
+     #mwt_fb_tab 
+	{
+     position:absolute;
+     top:20px;
+     right:-24px;
+     width:24px;
+     background:#39393a;
+     color:#ffffff;
+     font-family:Arial, Helvetica, sans-serif;
+     text-align:center;
+     padding:9px 0;
+
+     -moz-border-radius-topright:10px;
+     -moz-border-radius-bottomright:10px;
+     -webkit-border-top-right-radius:10px;
+     -webkit-border-bottom-right-radius:10px;
+    }
+     #mwt_fb_tab span 
+	{
+     display:block;
+     height:14px;
+     padding:1px 0;
+     line-height:12px;
+     text-transform:uppercase;
+     font-size:16px;
+    }
+   </style>
+<!-- javascript-->
+<script type='text/javascript' src='https://code.jquery.com/jquery-1.9.1.min.js'></script>
+<script type='text/javascript'>
+
+  
+$(function(){
+var w = $("#mwt_slider_content").width();
+$('#mwt_slider_content').css('height', ($(window).height() - 20) + 'px' ); //將區塊自動撐滿畫面高度
+
+$("#mwt_fb_tab").mouseover(function(){ //滑鼠滑入時
+if ($("#mwt_mwt_slider_scroll").css('left') == '-'+w+'px')
+{
+$("#mwt_mwt_slider_scroll").animate({ left:'0px' }, 600 ,'swing');
+}
+});
+
+
+$("#mwt_slider_content").mouseleave(function(){　//滑鼠離開後
+$("#mwt_mwt_slider_scroll").animate( { left:'-'+w+'px' }, 600 ,'swing');
+});
+});
+
+</script>
+
+   </head>
+   
+   <body style="scrollbar-base-color:red">
+
+    <DIV style="text-align:center;">
+     
+	 <img src="../static/image/LOGO.png" height="110px" width="170px">
+
+   </DIV>
+   <style>
+
+   a {
+    text-decoration:none;
+     }
+
+    html{
+   width: 100% ;
+   height: 100% ;
+   background: url(../static/image/bg.png)  no-repeat  center  bottom ;    
+    -webkit-background-size: contain ;
+   background-size: cover ;
+   background-attachment: fixed;
+   } 
+
+   </style>
+   
+   <hr color="#146836" width="80%" size="3">
+   
+   <script language="javascript">
+     function TestBlack(TagName){
+     var obj = document.getElementById(TagName);
+       if(obj.style.display==''){
+         obj.style.display = 'none';
+        }else{
+         obj.style.display = '';
+       }
+      }
+   </script>
+
+   <!--抽樣狀況-->
+   
+   <h1 align="center"><font face="微軟正黑體" size="25px">店家抽樣狀況</font></h1><br>
+
+      
+   <form align="center"><!--選擇抽查店家-->
+     <font face="微軟正黑體" >農民姓名(代號):
+     <select name="YourLocation">
+　     <option value="shop1">德昌</option>
+　     <option value="shop2">合順</option>
+　     <option value="shop3">廣信</option>
+　     <option value="shop4">玉成</option>
+     </select>
+   </form> <br><br>
+   <form align="center"><!--選擇抽查月份-->
+     <font face="微軟正黑體" >抽查日期: 
+     <select name="YourLocation">
+　     <option value="jan">1月</option>
+　     <option value="feb">2月</option>
+　     <option value="mar">3月</option>
+　     <option value="april">4月</option>
+     </select>
+   </form><br><br>
+   <font face="微軟正黑體" >地址:</font> 
+   <font face="微軟正黑體" ><label for="address">桃園市中壢區新明路123號</label></font><br><br>
+   <table align="center" border="1" >
+   
+     <tr height="20">
+	    <th  width="200" bgcolor="#c4e0b8"><font face="微軟正黑體" size="5px">蔬果名稱</th>
+		<th  width="200" bgcolor="#c4e0b8"><font face="微軟正黑體" size="5px">合格狀況</th>
+		<th  width="200" bgcolor="#c4e0b8"><font face="微軟正黑體" size="5px">詳細內容</th>
+	 </tr>
+     <tr>
+	    <th  width="200"><font face="微軟正黑體" size="4px">高麗菜</th>
+		<th  width="200"><font face="微軟正黑體" size="4px">不合格</th>
+		<th  width="200" onclick="TestBlack('divc');"><font face="微軟正黑體" color = "blue" >點我看詳細資訊</th>
+	 </tr>
+     <tr>
+	    <th  width="200"><font face="微軟正黑體" size="4px">大陸妹</th>
+		<th  width="200"><font face="微軟正黑體" size="4px">合格</th>
+		<th  width="200" onclick="TestBlack('divc');"><font face="微軟正黑體" color = "blue">點我看詳細資訊</th>
+	 </tr>
+     <tr>
+	    <th  width="200"><font face="微軟正黑體" size="4px">A菜</th>
+		<th  width="200"><font face="微軟正黑體" size="4px">不合格</th>
+		<th  width="200" onclick="TestBlack('divc');"><font face="微軟正黑體" color = "blue">點我看詳細資訊</th>
+	 </tr>
+	 
+	 </font>
+   </table>
+   <br><br>
+   
+     <table align="center" border="1"  id="divc">
+	  <tr ><font face="微軟正黑體" size="5px">詳細農藥資訊</tr>
+      <tr>
+	    <th  bgcolor="#c4e0b8" width="200"><font face="微軟正黑體" size="4px">農藥名稱</th>
+		<th  bgcolor="#c4e0b8" width="200"><font face="微軟正黑體" size="4px">合格狀況</th>
+		<th  bgcolor="#c4e0b8" width="200"><font face="微軟正黑體" size="4px">農藥小百科</th>
+
+ 	  </tr>
+	  <tr>
+	    <th  width="200"><font face="微軟正黑體" size="4px">快得保浮</th>
+		<th  width="200"><font face="微軟正黑體" size="4px">使用過量</th>
+		<th  width="200"><a href="KNOWLEDGE.html"><font face="微軟正黑體" size="4px">農藥資訊</a></th>
+
+	  </tr>
+
+     </table>
+	 
+<!--選單-->
+	 <div id="mwt_mwt_slider_scroll">
+       <div id="mwt_fb_tab">
+         <span>M</span>
+         <span>E</span>
+         <span>N</span>
+         <span>U</span>
+       </div>
+       <div id="mwt_slider_content">     
+	      <nav class="navbar navbar-inverse easy-sidebar">
+	     <div class="container-fluid"> 
+	     <div class="navbar-header">
+
+		    <h1> <font  face="微軟正黑體">功能列表</font></h1>
+		  <a href="/">
+		  <font color="#000000" face="微軟正黑體" style=cursor='hand' 
+         onMouseover="this.color='820f26'"
+         onmouseout="this.color='000000'">健康地圖
+          </font></a> <br>
+		  
+		  <br><a href="/status">
+		  <font color="#000000" face="微軟正黑體" style=cursor='hand' 
+         onMouseover="this.color='820f26'"
+         onmouseout="this.color='000000'">農藥抽查狀況
+          </font></a> <br>
+		  
+		  <br><a href="/rank">
+		  <font color="#000000" face="微軟正黑體" style=cursor='hand' 
+         onMouseover="this.color='820f26'"
+         onmouseout="this.color='000000'">店家排名
+          </font></a> <br>
+		  
+		  <br><a href="../knowledge/?Pesticide=THIOPHANATE-METHYL+%2B+OXINE-COPPER">
+		  <font color="#000000" face="微軟正黑體" style=cursor='hand' 
+         onMouseover="this.color='820f26'"
+         onmouseout="this.color='000000'">農藥小百科
+          </font></a> <br> 
+		  
+	     </div>
+	 	
+	 	 <!-- /.container-fluid --> 
+		  </nav>
+		  <div class="container">
+		  
+		 
+	 	 </div> 
+       </div>
+     </div>
+<!--選單-->
+
+
+	</body>
+		
+</html>

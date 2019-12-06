@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>JS实现鼠标点击展开/隐藏表格行</title>
+</head>
+<body>
+<script language="javascript">
+function TestBlack(TagName){
+ var obj = document.getElementById(TagName);
+ if(obj.style.display==""){
+  obj.style.display = "none";
+ }else{
+  obj.style.display = "";
+ }
+}
+</script>
+<table width="760" border="0" cellspacing="0" cellpadding="0">
+    <tr onclick="TestBlack('divc');">
+        <td width="760" height="20" bgcolor="#00CCFF">Click Me!</td>
+    </tr>
+    <tr id="divc">
+        <td width="760" height="60" bgcolor="#9966FF"></td>
+    </tr>
+</table>
+</body>
+</html>
