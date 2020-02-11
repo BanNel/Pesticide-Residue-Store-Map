@@ -1,5 +1,4 @@
 # Pesticide-Residue-Store-Map
-Pesticide Residue Store Map
 ![image](https://github.com/BanNel/Pesticide-Residue-Store-Map/blob/master/%E7%AC%AC%E4%B8%89%E7%B5%84_%E5%81%A5%E5%BA%B7%E5%91%B7%E9%9C%B8%E7%B2%92%E6%8A%95%E5%BD%B1%E7%89%87PNG/%E6%8A%95%E5%BD%B1%E7%89%871.PNG)
 ![image](https://github.com/BanNel/Pesticide-Residue-Store-Map/blob/master/%E7%AC%AC%E4%B8%89%E7%B5%84_%E5%81%A5%E5%BA%B7%E5%91%B7%E9%9C%B8%E7%B2%92%E6%8A%95%E5%BD%B1%E7%89%87PNG/%E6%8A%95%E5%BD%B1%E7%89%872.PNG)
 ![image](https://github.com/BanNel/Pesticide-Residue-Store-Map/blob/master/%E7%AC%AC%E4%B8%89%E7%B5%84_%E5%81%A5%E5%BA%B7%E5%91%B7%E9%9C%B8%E7%B2%92%E6%8A%95%E5%BD%B1%E7%89%87PNG/%E6%8A%95%E5%BD%B1%E7%89%873.PNG)
